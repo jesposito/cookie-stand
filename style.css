@@ -1,10 +1,18 @@
 body {
   background-color: #ffa07a;
 }
+.serif {
+  font-family: Times, "Times New Roman", Georgia, serif;
+}
+.sans {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.goog {
+  font-family: 'Delius', cursive;
+  color: white;
+}
 header {
   padding-top: 2%;
-  padding-left: 20%;
-  padding-right: 20%;
   width: 99%;
   min-height: 100px;
 }
@@ -26,22 +34,50 @@ section {
   float:left;
 }
 h1 {
+  text-align: center;
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
   font-size:4em;
   font-weight: 400;
   line-height: 80px;
-  margin: 0 0 10px;
 }
 @media (max-width:700px){h1{font-size: 2em; line-height: 40px;}}
 @media (max-width:650px){h1{font-size: 1.2em; line-height: 20px; margin-top: 50px;}}
 h3 {
   color: #fa8072;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 28px;
   font-weight: 400;
   line-height: 32px;
   margin: 0 0 1px;
+}
+h4 {
+  color: #fa8072;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0 0 1px;
+}
+h5 {
+  color: #111111;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0 0 1px;
+}
+p {
+  color: #635059;
+  font-size: 14px;
+  text-align: left;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
 }
 .row {
   clear: both;
@@ -57,6 +93,14 @@ h3 {
   margin: 10px;
   border-radius: 25px;
 }
+.col1 {
+  padding-left: 10px;
+  float: left;
+  width: 30%;
+  min-width: 15em;
+  margin: 5px;
+  border-radius: 25px;
+}
 @media (max-width:650px){.col{clear:both;}}
 ul {
    list-style: none;
@@ -69,6 +113,7 @@ ul li {
    padding: 3px 10px 5px 20px;
    border-bottom: 1px solid #ccc;
    color: #666;
+   max-width: 15em;
 }
 ul li:hover {
    color: #000;
