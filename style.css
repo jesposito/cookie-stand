@@ -1,0 +1,140 @@
+body {
+  background-color: #ffa07a;
+}
+.serif {
+  font-family: Times, "Times New Roman", Georgia, serif;
+}
+.sans {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.goog {
+  font-family: 'Delius', cursive;
+  color: white;
+}
+header {
+  padding-top: 2%;
+  width: 99%;
+  min-height: 100px;
+}
+main {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.preFooter {
+  min-height: 100px;
+  width: 99%;
+  clear: both;
+}
+section {
+  background-color: #f1f1f1;
+  min-height: 200px;
+  width: 98%;
+  padding: 15px;
+  margin: 5px;
+  float:left;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:4em;
+  font-weight: 400;
+  line-height: 80px;
+}
+@media (max-width:700px){h1{font-size: 2em; line-height: 40px;}}
+@media (max-width:650px){h1{font-size: 1.2em; line-height: 20px; margin-top: 50px;}}
+h3 {
+  color: #fa8072;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0 0 1px;
+}
+h4 {
+  color: #fa8072;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0 0 1px;
+}
+h5 {
+  color: #111111;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0 0 1px;
+}
+p {
+  color: #635059;
+  font-size: 14px;
+  text-align: left;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
+}
+.row {
+  clear: both;
+  border-radius: 25px;
+}
+@media (max-width:650px){.row{max-width:19em;}}
+.col {
+  padding-left: 20px;
+  float: left;
+  width: 27.59%;
+  min-width: 15em;
+  border: 1px solid gray;
+  margin: 10px;
+  border-radius: 25px;
+}
+.col1 {
+  padding-left: 10px;
+  float: left;
+  width: 30%;
+  min-width: 15em;
+  margin: 5px;
+  border-radius: 25px;
+}
+@media (max-width:650px){.col{clear:both;}}
+ul {
+   list-style: none;
+   margin: 1em 0;
+   padding: 0;
+}
+ul li {
+   font-weight: bold;
+   margin: 0;
+   padding: 3px 10px 5px 20px;
+   border-bottom: 1px solid #ccc;
+   color: #666;
+   max-width: 15em;
+}
+ul li:hover {
+   color: #000;
+   background-color: #ddd;
+}
+
+/*Just in case I need to style the list IDs ----*/
+/*
+#firstAndPike {
+
+}
+#seaTacAir {
+
+}
+#seattleCenter {
+
+}
+#capHill {
+
+}
+#alki {
+
+}
+*/
