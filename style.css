@@ -1,5 +1,6 @@
 body {
   background-color: #ffa07a;
+  font-size: 12px;
 }
 .serif {
   font-family: Times, "Times New Roman", Georgia, serif;
@@ -28,6 +29,7 @@ main {
 section {
   background-color: #f1f1f1;
   min-height: 200px;
+  min-width: 98%;
   width: 98%;
   padding: 15px;
   margin: 5px;
@@ -71,7 +73,7 @@ h5 {
 }
 p {
   color: #635059;
-  font-size: 14px;
+  font-size: 1rem;
   text-align: left;
 }
 hr {
@@ -85,7 +87,7 @@ hr {
 }
 @media (max-width:650px){.row{max-width:19em;}}
 .col {
-  padding-left: 20px;
+  padding-left: 20rem;
   float: left;
   width: 27.59%;
   min-width: 15em;
@@ -97,7 +99,7 @@ hr {
   padding-left: 10px;
   float: left;
   width: 30%;
-  min-width: 15em;
+  min-width: 15rem;
   margin: 5px;
   border-radius: 25px;
 }
@@ -106,9 +108,9 @@ hr {
 table
 {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	font-size: 12px;
+	font-size: 1rem;
 	margin: 1%;
-	width: 70%;
+	width: 60%;
 	text-align: left;
 	border-collapse: collapse;
 	border: 1px solid #69c;
@@ -117,7 +119,7 @@ table th
 {
 	padding: 1% 1.2% 1% 1.2%;
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 1rem;
 	color: #039;
 	border-bottom: 1px dashed #69c;
 }
