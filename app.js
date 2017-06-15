@@ -27,7 +27,7 @@ Store.prototype.randnum = function() {
 Store.prototype.makeRow = function() {
   //Ccreate the row  element
   var newRowEl = document.createElement('tr');
-  //write store name to row
+  //write store name to row with new class 'location'
   var cellEl = document.createElement('th');
   cellEl.id = 'location';
   cellEl.textContent = this.location;
