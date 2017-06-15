@@ -28,15 +28,15 @@ Store.prototype.makeRow = function() {
   //Ccreate the row  element
   var newRowEl = document.createElement('tr');
   //write store name to row
-  var itemDataEl = document.createElement('th');
-  itemDataEl.id = 'location';
-  itemDataEl.textContent = this.location;
-  newRowEl.appendChild(itemDataEl);
+  var cellEl = document.createElement('th');
+  cellEl.id = 'location';
+  cellEl.textContent = this.location;
+  newRowEl.appendChild(cellEl);
   //write results data to row
   for (var i = 0; i < this.results.length; i++) {
-    var itemDataEl = document.createElement('td');
-    itemDataEl.textContent = this.results[i];
-    newRowEl.appendChild(itemDataEl);
+    var cellEl = document.createElement('td');
+    cellEl.textContent = this.results[i];
+    newRowEl.appendChild(cellEl);
   }
   //write the total sales for the day to the end of the line.
   var totalDataEl = document.createElement('td');
