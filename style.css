@@ -110,10 +110,18 @@ table
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	font-size: 1rem;
 	margin: 1%;
-	width: 60%;
+	width: 70%;
 	text-align: left;
 	border-collapse: collapse;
 	border: 1px solid #69c;
+}
+#location {
+  padding: 1% 1.2% 1% 1.2%;
+  font-weight: normal;
+  min-width: 7rem;
+  font-size: 1rem;
+  color: #039;
+  border-bottom: 1px dashed #69c;
 }
 table th
 {

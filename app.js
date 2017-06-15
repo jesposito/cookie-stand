@@ -29,6 +29,7 @@ Store.prototype.makeRow = function() {
   var newRowEl = document.createElement('tr');
   //write store name to row
   var itemDataEl = document.createElement('th');
+  itemDataEl.id = 'location';
   itemDataEl.textContent = this.location;
   newRowEl.appendChild(itemDataEl);
   //write results data to row
