@@ -79,3 +79,26 @@ for (var s = 0; s < stores.length; s++) {
   }
   currentStore.makeRow();
 }
+
+var formEl = document.getElementById('makeNewStore');
+formEl.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event){
+  event.preventDefault();
+  var id = event.target.id.value;
+  var location = event.target.location.value;
+  var minCPH = event.target.minCPH.value;
+  var maxCPH = event.target.maxCPH.value;
+  var avgCPH = event.target.avgCPH.value;
+  var newLocation = new Store(id,location,minCPH,maxCPH,avgCPH);
+  stores.push(newLocation);
+  var index = stores.length - 1;
+  for (var i = 1; i < stores[index]['hours'].length - 1; i++) {
+    stores[index].hourlySales = Math.floor((stores[index].randnum() * stores[index].avgCPC));
+    stores[index].totalSales += stores[index].hourlySales;
+    var currentHour = stores[index].hours[i];
+    stores[index].results.push(stores[index].hourlySales);
+  }
+  stores[index].makeRow();
+  console.log(stores[index]);
+}

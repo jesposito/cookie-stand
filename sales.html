@@ -16,6 +16,40 @@
           <table class="myTable" id="sales"></table>
         </section>
       </section>
+      <section class="row">
+        <form id="makeNewStore">
+          <fieldset>
+            <legend>Add values for new stores below:</legend>
+
+            <div>
+              <label for="id">Enter the store id here:</label>
+              <input id="id-input" type="text" name="id"  placeholder="ex: firstAndPike" required>
+            </div>
+
+            <div>
+              <label for="location">Enter the store name/location:</label>
+              <input id="location" type="text"  name="location" placeholder="ex: First and Pike" required>
+            </div>
+
+            <div>
+              <label for="minCPH">Enter the minimum customers per hour:</label>
+              <input type="number" min="1" step="1" name="minCPH" placeholder="ex: 15" required>
+            </div>
+
+            <div>
+              <label for="maxCPH">Enter the maximum customers per hour:</label>
+              <input type="number" min="1" step="1" name="maxCPH" placeholder="ex: 300" required>
+            </div>
+
+            <div>
+              <label for="avgCPH">Enter the average cookies sold per hour at the store:</label>
+              <input type="number" min="1" step="1" name="avgCPH"  placeholder="ex: 600" required>
+            </div>
+
+            <input type="submit" value="Add New Store">
+          </fieldset>
+    </form>
+      </section>
       <div class="preFooter"></div>
     </main>
     <footer>
