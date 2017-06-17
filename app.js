@@ -35,11 +35,13 @@ Store.prototype.makeRow = function() {
   //write results data to row
   for (var i = 0; i < this.results.length; i++) {
     var cellEl = document.createElement('td');
+    cellEl.id = this.hours[i + 1] + 'val';
     cellEl.textContent = this.results[i];
     newRowEl.appendChild(cellEl);
   }
-  //write the total sales for the day to the end of the line.
+  //write the total sales for the day to the end of the row.
   var totalDataEl = document.createElement('td');
+  totalDataEl.id = this.hours[16] + 'val';
   totalDataEl.textContent = this.totalSales;
   newRowEl.appendChild(totalDataEl);
   tableBodyEl.appendChild(newRowEl);
@@ -66,6 +68,7 @@ tableEl.appendChild(tableBodyEl);
 //Populate the table header
 stores[0].makeHeader();
 
+var hourlyTotals = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 //Loop through each store and create object with appropriate data
 for (var s = 0; s < stores.length; s++) {
   //Let's drop the current store (position in the stores array) into a variable in the loop called currentStore
@@ -76,9 +79,28 @@ for (var s = 0; s < stores.length; s++) {
     currentStore.totalSales += currentStore.hourlySales;
     var currentHour = currentStore.hours[i];
     currentStore.results.push(currentStore.hourlySales);
+    hourlyTotals[i - 1] += currentStore.hourlySales;
   }
+  hourlyTotals[15] += (currentStore.totalSales);
   currentStore.makeRow();
 }
+
+var createFooterRow = function () {
+  var footerRowEl = document.createElement('tr');
+  footerRowEl.id = 'footerRow';
+  tableBodyEl.appendChild(footerRowEl);
+  var footerLabelEl = document.createElement('th');
+  footerLabelEl.textContent = 'Hourly Totals';
+  footerRowEl.appendChild(footerLabelEl);
+  for (var i = 1; i < stores[0].hours.length; i++) {
+    var footerDataEl = document.createElement('td');
+    footerDataEl.id = stores[0].hours[i];
+    footerDataEl.textContent = hourlyTotals[i - 1];
+    footerRowEl.appendChild(footerDataEl);
+  }
+};
+
+createFooterRow();
 
 var formEl = document.getElementById('makeNewStore');
 formEl.addEventListener('submit', handleSubmit);
@@ -98,7 +120,12 @@ function handleSubmit(event){
     stores[index].totalSales += stores[index].hourlySales;
     var currentHour = stores[index].hours[i];
     stores[index].results.push(stores[index].hourlySales);
+    hourlyTotals[i - 1] += stores[index].hourlySales;
   }
+  hourlyTotals[15] += (stores[index].totalSales);
+  var footerRow = document.getElementById('footerRow');
+  footerRow.parentNode.removeChild(footerRow);
   stores[index].makeRow();
+  createFooterRow();
   console.log(stores[index]);
 }
