@@ -1,4 +1,4 @@
-body {
+/*body {
   background-color: #ffa07a;
   font-size: 12px;
 }
@@ -135,4 +135,36 @@ table tbody tr:hover td
 {
 	color: #339;
 	background: #d0dafd;
+}*/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+#main {
+  display: flex;
+  flex: 1;
+}
+#main > article {
+  flex: 1;
+}
+#main > nav,
+#main > aside {
+  flex: 0 0 20vw;
+  background: beige;
+}
+#main > nav {
+  order: -1;
+}
+header, footer {
+  background: yellowgreen;
+  height: 20vh;
+}
+header, footer, article, nav, aside {
+  padding: 1em;
 }
