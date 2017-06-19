@@ -1,6 +1,9 @@
-/*body {
+body {
   background-color: #ffa07a;
-  font-size: 12px;
+  font-size: 14px;
+}
+form {
+  margin: 2.5em;
 }
 .serif {
   font-family: Times, "Times New Roman", Georgia, serif;
@@ -135,9 +138,9 @@ table tbody tr:hover td
 {
 	color: #339;
 	background: #d0dafd;
-}*/
+}
 
-* {
+/** {
   box-sizing: border-box;
 }
 body {
@@ -167,4 +170,4 @@ header, footer {
 }
 header, footer, article, nav, aside {
   padding: 1em;
-}
+}*/

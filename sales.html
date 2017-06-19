@@ -4,6 +4,7 @@
     <meta charset="utf-8">
       <link rel="stylesheet" href="reset.css">
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <title></title>
   </head>
   <body>
@@ -14,12 +15,12 @@
         <section>
           <h3>Sales </h3>
             <table class="myTable" id="sales">
-              
+
             </table>
         </section>
       </section>
       <section class="row">
-        <form id="makeNewStore">
+        <form class="pure-form pure-form-stacked" id="makeNewStore">
           <fieldset>
             <legend>Add values for new stores below:</legend>
 
@@ -44,11 +45,11 @@
             </div>
 
             <div>
-              <label for="avgCPH">Enter the average cookies sold per hour at the store:</label>
+              <label for="avgCPH">Enter the average cookies sold per customer at the store:</label>
               <input type="number" min="1" step="1" name="avgCPH"  placeholder="ex: 600" required>
             </div>
 
-            <input type="submit" value="Add New Store">
+            <input class="pure-button pure-button-primary" type="submit" value="Add New Store">
           </fieldset>
     </form>
       </section>
